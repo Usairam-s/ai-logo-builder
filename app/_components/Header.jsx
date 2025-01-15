@@ -10,7 +10,7 @@ function Header() {
     <header className="border-b w-full shadow-sm">
       <nav className="flex items-center justify-between p-4 md:px-10 lg:px-14 ">
         <h1 className="text-xl cursor-pointer bg-primary text-white p-2 rounded-md shadow-lg md:text-2xl lg:text-3xl font-bold">
-          <Link href={"/"}>AiLogoMaker</Link>
+          <Link href={"/"}>AiLogoBuilder</Link>
         </h1>
 
         <div>
