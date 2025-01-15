@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import LogoTitle from "./_components/LogoTitle";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -67,10 +67,12 @@ function page() {
           switch (currentStep) {
             case 1:
               return (
-                <LogoTitle
-                  value={formData.title}
-                  onHandleInputChange={(v) => handleChange("title", v)}
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <LogoTitle
+                    value={formData.title}
+                    onHandleInputChange={(v) => handleChange("title", v)}
+                  />
+                </Suspense>
               );
             case 2:
               return (
